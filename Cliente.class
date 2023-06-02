@@ -3,6 +3,11 @@ public class Cliente{
     private cpf;
     Conta conta;
 
+    public Cliente(nome, cpf, conta){
+        this.nome = nome;
+        this.cpf = cpf;
+        this.conta = conta;
+    }
     private boolean verificarValorMaiorQueZero(double valor){
         if(valor > 0){
             return true;
