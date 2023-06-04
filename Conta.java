@@ -9,11 +9,11 @@ public class Conta{
         this.numeroDaConta = numeroDaConta;
     }
 
-    public void getExtrato(){
-        System.out.println("Saldo: R$" + this.saldo);
+    public double getExtrato(){
+        return this.saldo;
     }
 
     public void getInformationOfAccount(){
-        System.out.println("Número da Agência: "+this.numeroAgencia+"\nNúmero da Conta: " + this.numeroDaConta);
+        System.out.println("Saldo: R$"+ this.saldo + "\nNúmero da Agência: "+this.numeroAgencia+"\nNúmero da Conta: " + this.numeroDaConta);
     }
 }
