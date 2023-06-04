@@ -35,18 +35,10 @@ public class Cliente{
         }
     }
 
-    public boolean mandarPix(double valor, Conta contaDestino){
-        if(verificarValorMaiorQueZero(valor)){
-            this.conta.saldo -= valor;
-            contaDestino.saldo += valor;
-            return true;
-        }else{
-            return false;
-        }
-    }
-
     public void getDados(){
-        System.out.println("NOME: " + this.nome+"\nCPF: " + this.cpf+"\n-----------------------------------");
+        System.out.println("NOME: " + this.nome+"\nCPF: " + this.cpf);
+        this.conta.getInformationOfAccount();
+        System.out.println("\n-----------------------------------\n");
     }
 
     public void getSaldo(){
