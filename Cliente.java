@@ -28,8 +28,13 @@ public class Cliente{
 
     public boolean sacar(double valor){
         if(verificarValorMaiorQueZero(valor)){
-            conta.saldo -= valor;
-            return true;
+            double saldoAtual = this.conta.getExtrato();
+            if(saldoAtual >= valor){
+                conta.saldo -= valor;
+                return true;
+            }else{
+                return false;
+            }
         }else{
             return false;
         }
@@ -41,7 +46,7 @@ public class Cliente{
         System.out.println("\n-----------------------------------\n");
     }
 
-    public void getSaldo(){
-        this.conta.getExtrato();
+    public double getSaldo(){
+        return this.conta.getExtrato();
     }
 }
